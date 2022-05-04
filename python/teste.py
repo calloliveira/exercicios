@@ -1,1 +1,1 @@
-print('Xalalau')
+print('Xalalau 9900')
