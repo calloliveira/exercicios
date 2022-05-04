@@ -1,6 +1,8 @@
-palavras = ('Teste', 'Carro', 'Busao', 'Armas', 'Fogos', 'Geladeira', 'Casa', 'Familia', 'Computador', 'Vegetal', 'Televisao', 'Inventor')
+palavras = ('Teste', 'Carro', 'Busao', 'Armas', 'Fogos', 'Geladeira', 'Casa', 
+            'Familia', 'Computador', 'Vegetal', 'Televisao', 'Inventor')
 print('Contagem de vogais')
-for cont in palavras:
-    cont = cont.lower()
-    print(f'{cont.upper()} - A: {cont.count("a")} / E: {cont.count("e")} / I: {cont.count("i")} / O: {cont.count("o")} / U: {cont.count("u")} ')
-    
+for p in palavras:
+    print(f'\nA palavra {p.upper()} tem as vogais: ', end='')
+    for letra in p:
+        if letra.lower() in 'aeiou':
+            print(letra.lower(), end=' ')
