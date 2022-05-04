@@ -1,4 +1,4 @@
-palavras = ('Teste', 'Carro', 'Busao', 'Armas', 'Fogos', 'Geladeira', 'Casa', 'Familia', 'Xalalau', 'Xenoubas', 'Labariebas', 'Inventor')
+palavras = ('Teste', 'Carro', 'Busao', 'Armas', 'Fogos', 'Geladeira', 'Casa', 'Familia', 'Computador', 'Vegetal', 'Televisao', 'Inventor')
 print('Contagem de vogais')
 for cont in palavras:
     cont = cont.lower()
