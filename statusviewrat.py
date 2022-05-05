@@ -17,11 +17,10 @@ while True:
     print(f'\nStatus: {opt}')
     for s2 in status:
         if not opt == s2:
-            cont = 'null'
             print(f'Status: {s2}')
+    cont = 'null'
+    opt = 'null'
     if cont not in 'SsNn':
         cont = str(input('\nDeseja continuar? [S/N] '))
-        if cont in 'Nn':
-            break
-        else:
-            cont = 'null'
+    if cont in 'Nn':
+        break
