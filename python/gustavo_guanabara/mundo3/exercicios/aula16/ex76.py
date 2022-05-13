@@ -1,6 +1,6 @@
-produtos = ('Café', 18.99, 'Arroz', 15.09, 'Feijão', 06.95, 'Sal', 01.99, 
-            'Farinha', 06.85, 'Açúcar', 03.99, 'Óleo', 08.25, 'Vinagre', 01.99, 
-            'Macarrão', 03.99, 'Molho-de-tomate', 01.98, 'Bolacha-recheada', 01.98,
+produtos = ('Cafe', 18.99, 'Arroz', 15.09, 'Feijao', 06.95, 'Sal', 01.99, 
+            'Farinha', 06.85, 'Açucar', 03.99, 'oleo', 08.25, 'Vinagre', 01.99, 
+            'Macarrao', 03.99, 'Molho-de-tomate', 01.98, 'Bolacha-recheada', 01.98,
             'Farinha-de-milho', 06.95)
 print('-' * 40)
 print(f'{"Lista de preços":^40}')
