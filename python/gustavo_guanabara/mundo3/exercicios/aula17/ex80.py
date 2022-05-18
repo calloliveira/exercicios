@@ -4,9 +4,9 @@ for cont in range (0, 5):
     if valores == []:
         valores.append(valor)
     else:
-        if valor > valores[cont-1]:
-            valores.append(valor)
-        else:
-            valores.insert(valores[cont-1], valor)
-            print('Deu certo 2')
+        for v in valores:
+            if valor > v:
+                valores.append(valor)
+            else:
+                print('É NÓIS!!!')        
 print(valores)
