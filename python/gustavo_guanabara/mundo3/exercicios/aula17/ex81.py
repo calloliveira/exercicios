@@ -9,4 +9,6 @@ while True:
     else:
         resp = 'null'
 print(f'A lista contém {len(valores)} valores!!!')
-print(f'Elementos da lista: {valores[]}')
+print(f'Elementos da lista: {valores[::-1]}')
+if 5 in valores:
+    print(f'Valor 5 encontrado na posição {valores.index(5)}')
