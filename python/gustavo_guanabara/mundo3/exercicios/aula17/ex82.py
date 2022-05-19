@@ -10,13 +10,11 @@ while True:
         break
     resp = 'null'
 print(valores)
-
 for v in valores:
     if v % 2 == 0:
         pvalores.append(v)
     else:
         ivalores.append(v)
-        
 print(f'Valores digitados: {valores}')
 print(f'Valores ímpares: {sorted(ivalores)}')
 print(f'Valores pares: {sorted(pvalores)}')
