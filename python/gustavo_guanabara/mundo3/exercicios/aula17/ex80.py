@@ -1,7 +1,13 @@
 valores = list()
-for c in range(0,5):
+for cont in range (0,5):
     valor = int(input('Digite um valor: '))
-    if valores == []:
+    if valores == [] or valor > valores[-1]:
         valores.append(valor)
-    elif valores[c-1] 
+    else:
+        pos = 0
+        while pos < len(valores):
+            if valor < valores[pos]:
+                valores.insert(pos, valor)
+                break
+            pos += 1
 print(valores)
