@@ -5,9 +5,10 @@ while True:
     valor = int(input('Digite um valor: '))
     if not valor in valores:
         valores.append(valor)
-        if valor > maior or valor == 0:
+        print('Valor adicionado com sucesso!!!')
+        if valor > maior or maior == 0:
             maior = valor
-        if valor < menor or valor == 0:
+        if valor < menor or menor == 0:
             menor = valor
     else:
         print('Este valor já existe na lista e não será adicionado novamente!!!')
