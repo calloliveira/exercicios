@@ -2,29 +2,32 @@ pessoas = list()
 tot = 0
 pesadas = []
 leves = []
+continua = 'null'
 #Leitura dos dados
 while True:
     nome = str(input('Digite o nome: '))
-    peso = int(input('Digite o peso: '))
+    peso = float(input('Digite o peso: '))
     pessoas.append([nome, peso])
-    continua = str(input('Deseja continuar? [S/N] '))
+    while not continua in 'SNsn':
+        continua = str(input('Deseja continuar? [S/N] '))
     if continua in 'Nn':
         break
+    else:
+        continua = 'null'
 #Tratamento dos dados  
-for i, p in enumerate(pessoas):
+for p in pessoas:
     tot += 1
     if pesadas == [] and leves == []:
         pesadas.append(p)
         leves.append(p)
-    if p[1] > pesadas[0][1]:
+    elif p[1] > pesadas[0][1]:
         pesadas.clear()
         pesadas.append(p)
-    elif peso == pesadas[0][1]:
-        pesadas.append(p)
-    elif p[1] < leves[0][1]:
+    elif p[1] < leves[0][1] :
+        leves.clear()
         leves.append(p)
-    
-       
+        
+
 print(f'Total de pessoas cadastradas: {tot}')
 print(f'Pessoas mais pesadas {pesadas}')
 print(f'Pessoas mais leves {leves}')
