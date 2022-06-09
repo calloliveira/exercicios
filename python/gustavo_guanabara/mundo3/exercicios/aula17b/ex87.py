@@ -25,7 +25,7 @@ for v2 in matriz[1]:
         vpares += v2
 for v3 in matriz[2]:
     vcol3 += v3
-    if v3 % 2 == 0:
+    if v3 % 2 == 0: 
         vpares += v3
 print('=-' * 30)
 print('Criador de matrizes')
