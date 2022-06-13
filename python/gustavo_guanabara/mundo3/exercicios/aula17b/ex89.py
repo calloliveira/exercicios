@@ -13,5 +13,15 @@ while True:
 print('=-' * 30)
 print('BOLETIM DA CLASSE')
 print('=-' * 30)
+print(f'{"NOME":-<12}', end='')
+print(f'{"NOTA 1":->6}', end='')
+print(f'{"NOTA 2":->6}', end='')
+print()
 for a in boletim:
     print(f'Aluno: {a[0]} Nota1: {a[1]} Nota2: {a[2]} Média: {(a[1] + a[2]) / 2}')
+    
+    
+    
+    
+    
+    

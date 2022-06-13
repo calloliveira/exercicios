@@ -1,5 +1,4 @@
 from random import randint
-
 jogo = list()
 jogos = list()
 print('=-' * 30)
