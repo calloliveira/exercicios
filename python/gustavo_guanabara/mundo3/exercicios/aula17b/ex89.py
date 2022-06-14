@@ -2,7 +2,7 @@ aluno = list()
 boletim = list()
 c = 0
 while True:
-    aluno.append(str(input('Digite o nome do aluno: ')))
+    aluno.append(str(input('Digite o nome do aluno: ')).upper())
     aluno.append(float(input('Digite a primeira nota: ')))
     aluno.append(float(input('Digite a segunda nota: ')))
     boletim.append(aluno[:])
@@ -24,7 +24,14 @@ for a in boletim:
     print(f'{a[1]:.<10}', end='')
     print(f'{a[2]:.<10}', end='')
     print(f'{media}')
-
-    
-    
-    
+print()    
+while True:
+    pesquisa = str(input('Pesquisar Aluno ou 999 P/ Sair: ')).upper()
+    if pesquisa == '999':
+        break
+    for a in boletim:
+        if a[0] == pesquisa:
+            media = (a[1] + a[2]) / 2
+            print(f'Aluno: {a[0]} | N1: {a[1]} | N2: {a[2]} | Média: {media}')
+        else:
+            print('Aluno não encontrado')
