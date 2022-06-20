@@ -1,6 +1,6 @@
 valores = [[], [], []]
-for cont in range(0,7):
-    valor = int(input('Digite um valor: '))
+for cont in range(1,8):
+    valor = int(input(f'Digite o {cont}º valor: '))
     if valor % 2 == 0:
         valores[0].append(valor)
     else:
@@ -15,4 +15,3 @@ print('=-' * 30)
 print(f'Lista ordenada: {sorted(valores[2])}')
 print(f'Valores pares: {sorted(valores[0])}')
 print(f'Valores ímpares: {sorted(valores[1])}')
-print(f'Lista completa: {valores}')

@@ -1,4 +1,5 @@
 from random import randint
+from time import sleep
 jogo = list()
 jogos = list()
 print('=-' * 30)
@@ -16,4 +17,6 @@ for c in range(0,njogos):
 print('=-' * 30)    
 for i, j in enumerate(jogos):
     print(f'{i+1}º Jogo: {sorted(j)}')
+    sleep(0.5)
+print(f'{">BOA SORTE<":=^30}')
 print('=-' * 30)

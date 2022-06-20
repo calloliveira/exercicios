@@ -32,6 +32,13 @@ while True:
     for a in boletim:
         if a[0] == pesquisa:
             media = (a[1] + a[2]) / 2
-            print(f'Aluno: {a[0]} | N1: {a[1]} | N2: {a[2]} | Média: {media}')
-        else:
-            print('Aluno não encontrado')
+            aluno.clear()
+            aluno = a[0:]
+    if not aluno == []:
+        print(f'Aluno: {aluno[0]} | N1: {aluno[1]} | N2: {aluno[2]} | Média: {media}')
+        aluno.clear()
+        print()
+    else:
+        print(f'O Aluno {pesquisa} não fo encontrado no boletim !!!')
+        print()
+            
