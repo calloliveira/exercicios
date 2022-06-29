@@ -13,16 +13,11 @@ while True:
 print('=-' * 30)
 print('BOLETIM DA CLASSE')
 print('=-' * 30)
-print(f'{"NOME":-<20}', end='')
-print(f'{"NOTA1":-<10}', end='')
-print(f'{"NOTA2":-<10}', end='')
-print(f'{"MÉDIA"}')
+print(f'{"NOME":-<20}MÉDIA', end='')
 print()
 for a in boletim:
     media = (a[1] + a[2]) / 2
     print(f'{a[0]:.<20}', end='')
-    print(f'{a[1]:.<10}', end='')
-    print(f'{a[2]:.<10}', end='')
     print(f'{media}')
 print()    
 while True:
@@ -33,12 +28,11 @@ while True:
         if a[0] == pesquisa:
             media = (a[1] + a[2]) / 2
             aluno.clear()
-            aluno = a[0:]
+            aluno = a[0:]       
     if not aluno == []:
         print(f'Aluno: {aluno[0]} | N1: {aluno[1]} | N2: {aluno[2]} | Média: {media}')
         aluno.clear()
         print()
     else:
-        print(f'O Aluno {pesquisa} não fo encontrado no boletim !!!')
+        print(f'O Aluno {pesquisa} não foi encontrado no boletim !!!')
         print()
-            
