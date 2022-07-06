@@ -1,10 +1,13 @@
 aluno = dict()
 aluno['Nome'] = str(input('Nome do aluno: '))
-aluno['Media'] = float(input('Média do aluno: '))
-if aluno['Media'] < 6:
+aluno['Media'] = float(input(f'Média de {aluno["Nome"]}: '))
+if aluno['Media'] <= 5:
     aprov = 'Reprovado'
+elif aluno['Media'] >= 7:
+    aluno['Situação'] = 'Aprovado'
 else:
-    aprov = 'Aprovado'
-aluno['Situação'] = aprov
+    aluno['Situação'] = 'Recuperação'
+print('-=' * 30)
 for k, v in aluno.items():
-    print(f'{k} é igual a {v}')
+    print(f'- {k}: {v}')
+print('-=' * 30)
