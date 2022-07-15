@@ -13,5 +13,8 @@ if funcionario["Ctps"] != 0:
     if residual < 30:
         faltante = 30 - residual
         funcionario["Idade_Aposentadoria"] = funcionario["Idade"] + faltante
+print('=-' * 30)
+print(f'{"DADOS DO TRABALHADOR":=^50}')
+print('=-' * 30)
 for k, v in funcionario.items():
     print(f'{k}: {v}')
