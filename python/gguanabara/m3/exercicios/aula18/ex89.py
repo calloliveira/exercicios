@@ -1,38 +1,24 @@
-aluno = list()
-boletim = list()
-c = 0
+ficha = list()
 while True:
-    aluno.append(str(input('Digite o nome do aluno: ')).upper())
-    aluno.append(float(input('Digite a primeira nota: ')))
-    aluno.append(float(input('Digite a segunda nota: ')))
-    boletim.append(aluno[:])
-    cont = str(input('Deseja continuar [S/N] ? '))
-    aluno.clear()
-    if cont in 'Nn':
+    nome = str(input('Nome: '))
+    nota1 = float(input('Nota 1: '))
+    nota2 = float(input('Nota 2: '))
+    media = (nota1 + nota2) / 2
+    ficha.append([nome, [nota1, nota2], media])
+    resp = str(input('Quer continuar? [S/N]'))
+    if resp in 'Nn':
         break
-print('=-' * 30)
-print('BOLETIM DA CLASSE')
-print('=-' * 30)
-print(f'{"NOME":-<20}MÉDIA', end='')
-print()
-for a in boletim:
-    media = (a[1] + a[2]) / 2
-    print(f'{a[0]:.<20}', end='')
-    print(f'{media}')
-print()    
+print('-=' * 30)
+print(f'{"Nº.":<4}{"NOME":<10}{"MÉDIA":>8}')
+print('-' * 26)
+for i, a in enumerate(ficha):
+    print(f'{i:<4}{a[0]:<10}{a[2]:>8.1f}')
 while True:
-    pesquisa = str(input('Pesquisar Aluno ou 999 P/ Sair: ')).upper()
-    if pesquisa == '999':
+    print('-' * 35)
+    opc = int(input('Mostrar notas de qual aluno? (999 interrompe): '))
+    if opc == 999:
+        print('FINALIZANDO...')
         break
-    for a in boletim:
-        if a[0] == pesquisa:
-            media = (a[1] + a[2]) / 2
-            aluno.clear()
-            aluno = a[0:]       
-    if not aluno == []:
-        print(f'Aluno: {aluno[0]} | N1: {aluno[1]} | N2: {aluno[2]} | Média: {media}')
-        aluno.clear()
-        print()
-    else:
-        print(f'O Aluno {pesquisa} não foi encontrado no boletim !!!')
-        print()
+    if opc <= len(ficha) - 1:
+        print(f'As notas de {ficha[opc][0]} são {ficha[opc][1]}')
+print('<<< VOLTE SEMPRE >>>')

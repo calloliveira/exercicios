@@ -1,19 +1,15 @@
-print('=' * 30)
-print('Análise de strings')
-print('=' * 30)
-pares = ''
-valor1 = int(input('Digite um valor: '))
-valor2 = int(input('Digite outro valor: '))
-valor3 = int(input('Digite outro valor: '))
-valor4 = int(input('Digite outro valor: '))
-valortup = (valor1, valor2, valor3, valor4)
-for cont in valortup:
-    if cont % 2 == 0:
-        pares += (' ' + str(cont))
-print('=' * 30)
-print('Resultado')
-print('=' * 30)
-print(f'Ocorrências do nº 9: {valortup.count(9)}')
-print(f'Primeira ocorrência do nº 3: {valortup.index(3)+1}')
-print(f'Números pares: {pares}')
-print('=' * 30)
+núm = (int(input('Digite um número: ')),
+       int(input('Digite outro número: ')),
+       int(input('Digite mais um número: ')),
+       int(input('Digite o último número: ')))
+print(f'Voce digitou os valores {núm}')
+print(f'O valor 9 apareceu {núm.count(9)} vez(es)')
+if 3 in núm:
+    print(f'O valor 3 apareceu na {núm.index(3)+1}ª posição')
+else:
+    print('O valor 3 não foi digitado')
+print('Os valor pares digitados foram: ', end='')
+for count in núm:
+    if count % 2 == 0:
+        print(count, end=' ')
+        

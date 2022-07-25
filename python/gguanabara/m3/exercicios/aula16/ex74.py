@@ -12,11 +12,6 @@ while True:
     for num in numeros:
         print(f'{num}', end=' ')
     print(end='\n')
-    for c in numeros:
-        if c > maior:
-            maior = c
-        if c < menor or menor == 0:
-            menor = c
-    print(f'Maior valor: {maior}')
-    print(f'Menor valor: {menor}')
+    print(f'Maior valor: {max(numeros)}')
+    print(f'Menor valor: {min(numeros)}')
     resp = 'null'
