@@ -3,21 +3,24 @@ from time import sleep
 
 números = []
 
-def sorteia():
+def sorteia(lista):
     for c in range (1, 6):
-        print(f'Sorteando {c}º número...')
-        sleep(1)
-        números.append(randint(1,100))
+        n = randint(1,10)
+        print(f'Sorteando {c}º número...[ {n} ]')
+        sleep(0.2)
+        lista.append(n)
 
 def somaPar(números):
     soma = 0
     for n in números:
         if n % 2 == 0:
             soma += n
-    print(f'A soma entre os pares deu {soma}')
+    print(f'A soma entre os pares deu {soma}...')
 
-sorteia()
+sorteia(números)
+print('=' * 40)
 print('Calculando soma dos números pares sorteados...')
 print(f'Números sorteados: {números}')
-sleep(2)
+sleep(1)
 somaPar(números)
+print('=' * 40)
