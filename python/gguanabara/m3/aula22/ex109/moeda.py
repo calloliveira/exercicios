@@ -1,29 +1,21 @@
 def aumentar(num, p, show=False):
-    if show:
-        return f'R$ {((num / 100) * p) + num}'
-    else:
-        return ((num / 100) * p) + num
+    res = num + ((num / 100) * p)
+    return res if show is False else moeda(res)
 
 
 def diminuir(num, p, show=False):
-    if show:
-        return f'R$ {num - ((num / 100) * p)}'
-    else:
-        return num - ((num / 100) * p)
+    res = num - ((num / 100) * p)
+    return res if show is False else moeda(res)
 
 
 def dobro(num, show=False):
-    if show:
-        return f'R$ {num * 2}'
-    else:
-        return num * 2
+    res = num * 2
+    return res if show is False else moeda(res)
 
 
 def metade(num, show=False):
-    if show:
-        return f'R$ {num / 2}'
-    else:
-        return num / 2
-
+    res = num / 2
+    return res if show is False else moeda(res)
+    
 def moeda(v):
     return f'R$ {v}'

@@ -13,5 +13,5 @@ def metade(num):
     return (num / 2)
 
 
-def moeda(v):
-    return f'R$ {v}'
+def moeda(preço, moeda = 'R$'):
+    return f'{moeda}{preço:>.2f}'.replace('.',',')
